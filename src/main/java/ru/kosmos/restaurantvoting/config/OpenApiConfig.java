@@ -35,4 +35,5 @@ public class OpenApiConfig {
                 .pathsToMatch("/api/**")
                 .build();
     }
+
 }

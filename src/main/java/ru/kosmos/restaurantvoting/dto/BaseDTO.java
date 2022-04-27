@@ -1,4 +1,4 @@
-package ru.kosmos.restaurantvoting.to;
+package ru.kosmos.restaurantvoting.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AccessLevel;
@@ -10,7 +10,7 @@ import ru.kosmos.restaurantvoting.HasId;
 @NoArgsConstructor
 @AllArgsConstructor(access = AccessLevel.PROTECTED)
 @Data
-public abstract class BaseTo implements HasId {
+public abstract class BaseDTO implements HasId {
     @Schema(accessMode = Schema.AccessMode.READ_ONLY) // https://stackoverflow.com/a/28025008/548473
     protected Integer id;
 

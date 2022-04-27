@@ -2,7 +2,7 @@
 
 ---
 ### _A voting system REST API_
-- Stack: [JDK 17](http://jdk.java.net/17/), Spring Boot 2.5, Lombok, H2, Swagger/OpenAPI 3.0 <br>
+- Stack: [JDK 17](http://jdk.java.net/17/), Spring Boot 2.5, Lombok, HSQLDB, Swagger/OpenAPI 3.0 <br>
 
 Credentials:
 |Username|Password|

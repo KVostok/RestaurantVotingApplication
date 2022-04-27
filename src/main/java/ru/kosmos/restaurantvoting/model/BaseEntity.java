@@ -19,6 +19,8 @@ import javax.persistence.*;
 @AllArgsConstructor(access = AccessLevel.PROTECTED)
 public abstract class BaseEntity implements Persistable<Integer>, HasId {
 
+    public static final Integer START_SEQ = 10000;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Schema(accessMode = Schema.AccessMode.READ_ONLY) // https://stackoverflow.com/a/28025008/548473
