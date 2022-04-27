@@ -15,7 +15,7 @@ import java.util.Set;
 @Table(name = "dish", uniqueConstraints = @UniqueConstraint(columnNames = {"name"}, name = "dish_unique_name_idx"))
 @Getter
 @Setter
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor
 @ToString(callSuper = true)
 public class Dish extends NamedEntity {
 

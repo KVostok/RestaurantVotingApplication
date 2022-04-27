@@ -34,7 +34,7 @@ import java.util.Set;
 @Table(name = "restaurant", uniqueConstraints = @UniqueConstraint(columnNames = {"name"}, name = "restaurants_unique_name_idx"))
 @Getter
 @Setter
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor
 @ToString(callSuper = true)
 public class Restaurant extends NamedEntity {
 
