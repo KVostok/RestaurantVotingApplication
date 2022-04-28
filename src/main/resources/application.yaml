@@ -29,12 +29,19 @@ spring:
       setter: none
       is-getter: none
 
+#  https://stackoverflow.com/questions/28902374/spring-boot-rest-service-exception-handling
+  mvc:
+    throw-exception-if-no-handler-found: true
+  web:
+    resources:
+      add-mappings: false
+
 logging:
   level:
     root: WARN
     ru.kosmos.restaurantvoting: DEBUG
     org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver: DEBUG
-    org.springframework.security: DEBUG
+#    org.springframework.security: DEBUG
 
 server.servlet:
   encoding:

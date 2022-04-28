@@ -14,6 +14,7 @@ import ru.kosmos.restaurantvoting.util.UsersUtil;
 
 import java.util.List;
 
+import static ru.kosmos.restaurantvoting.error.UpdateRestrictionException.EXCEPTION_UPDATE_RESTRICTION;
 import static ru.kosmos.restaurantvoting.util.UsersUtil.PASSWORD_ENCODER;
 import static ru.kosmos.restaurantvoting.util.UsersUtil.prepareToSave;
 import static ru.kosmos.restaurantvoting.util.validation.ValidationUtil.checkNotFound;
@@ -84,7 +85,7 @@ public class UserService {
 
     protected void checkModificationAllowed(int id) {
         if (modificationRestriction && id <= BaseEntity.START_SEQ + 10) {
-            throw new UpdateRestrictionException();
+            throw new UpdateRestrictionException(EXCEPTION_UPDATE_RESTRICTION);
         }
     }
 
