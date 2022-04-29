@@ -1,4 +1,5 @@
 # Restaurant Voting Application
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/49a4529754a74237b11e587698914278)](https://app.codacy.com/gh/KVostok/RestaurantVotingApplication?utm_source=github.com&utm_medium=referral&utm_content=KVostok/RestaurantVotingApplication&utm_campaign=Badge_Grade_Settings)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/52674c3595a34ff49b6875f2119298fa)](https://www.codacy.com/gh/KVostok/RestaurantVotingApplication/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=KVostok/RestaurantVotingApplication&amp;utm_campaign=Badge_Grade)
 [![Build Status](https://app.travis-ci.com/KVostok/RestaurantVotingApplication.svg?branch=master)](https://app.travis-ci.com/KVostok/RestaurantVotingApplication)
 
