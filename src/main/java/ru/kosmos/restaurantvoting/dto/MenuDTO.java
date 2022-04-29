@@ -7,7 +7,6 @@ import lombok.Value;
 import javax.validation.constraints.NotNull;
 import java.beans.ConstructorProperties;
 import java.util.List;
-import java.util.Objects;
 
 @Value
 @EqualsAndHashCode(callSuper = true)
