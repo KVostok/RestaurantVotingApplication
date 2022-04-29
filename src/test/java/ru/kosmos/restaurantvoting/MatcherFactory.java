@@ -1,4 +1,4 @@
-package ru.kosmos.restaurantvoting.web;
+package ru.kosmos.restaurantvoting;
 
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.ResultActions;
