@@ -10,31 +10,12 @@ import ru.kosmos.restaurantvoting.error.IllegalRequestDataException;
 import ru.kosmos.restaurantvoting.error.NotFoundException;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.validation.*;
 import java.time.LocalTime;
-import java.util.Set;
 
 @UtilityClass
 public class ValidationUtil {
 
     public static LocalTime TIME_CONSTRAINT = LocalTime.of(11, 0, 0);
-
-    private static final Validator validator;
-
-    static {
-        //  From Javadoc: implementations are thread-safe and instances are typically cached and reused.
-        ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
-        //  From Javadoc: implementations of this interface must be thread-safe
-        validator = factory.getValidator();
-    }
-
-    public static <T> void validate(T bean) {
-        // https://alexkosarev.name/2018/07/30/bean-validation-api/
-        Set<ConstraintViolation<T>> violations = validator.validate(bean);
-        if (!violations.isEmpty()) {
-            throw new ConstraintViolationException(violations);
-        }
-    }
 
     public static <T> T checkNotFoundWithId(T object, int id) {
         checkNotFoundWithId(object != null, id);

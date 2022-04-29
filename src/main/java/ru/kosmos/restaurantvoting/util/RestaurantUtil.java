@@ -27,7 +27,13 @@ public class RestaurantUtil {
 
         Set<Votes> votes = menu.getVotes();
         Integer countVotes = votes.size();
-        boolean isVoted = votes.stream().anyMatch(votes1 -> votes1.getUser().id() == SecurityUtil.authUserId());
+        boolean isVoted = votes.stream()
+                .anyMatch(
+                        votes1 -> {
+                            int id = votes1.getUser().getId() == null ? 0 : votes1.getUser().getId();
+                            return id == SecurityUtil.authUserId();
+                        }
+                );
         return new RestaurantDTO(restaurant.getId(), restaurant.getName(), restaurant.getMenues(), countVotes, isVoted);
     }
 

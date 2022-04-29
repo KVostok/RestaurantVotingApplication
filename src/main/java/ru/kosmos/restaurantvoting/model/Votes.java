@@ -1,7 +1,10 @@
 package ru.kosmos.restaurantvoting.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 
@@ -9,7 +12,7 @@ import javax.persistence.*;
 @Table(name = "votes", uniqueConstraints = @UniqueConstraint(columnNames = {"user_id", "menu_id"}, name = "votes_unique_user_menu_idx"))
 @Getter
 @Setter
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor
 @AllArgsConstructor
 public class Votes extends BaseEntity {
 

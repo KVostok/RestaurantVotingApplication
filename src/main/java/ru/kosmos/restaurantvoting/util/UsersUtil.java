@@ -22,9 +22,9 @@ public class UsersUtil {
         return users;
     }
 
-    public static Users prepareToSave(Users users, PasswordEncoder passwordEncoder) {
+    public static Users prepareToSave(Users users) {
         users.getRoles().forEach(roles -> roles.setUser(users));
-        users.setPassword(passwordEncoder.encode(users.getPassword()));
+        users.setPassword(PASSWORD_ENCODER.encode(users.getPassword()));
         users.setEmail(users.getEmail().toLowerCase());
         return users;
     }

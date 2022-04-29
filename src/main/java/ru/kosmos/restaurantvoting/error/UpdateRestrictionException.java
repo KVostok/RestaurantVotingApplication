@@ -9,8 +9,8 @@ public class UpdateRestrictionException extends AppException {
 
     public static final String EXCEPTION_UPDATE_RESTRICTION = "exception.user.updateRestriction";
 
-    public UpdateRestrictionException(String Message) {
-        super(HttpStatus.UNPROCESSABLE_ENTITY, Message, ErrorAttributeOptions.of(MESSAGE));
+    public UpdateRestrictionException() {
+        super(HttpStatus.UNPROCESSABLE_ENTITY, EXCEPTION_UPDATE_RESTRICTION, ErrorAttributeOptions.of(MESSAGE));
     }
 
 }

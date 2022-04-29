@@ -10,6 +10,7 @@ import javax.validation.constraints.Size;
 @Data
 @EqualsAndHashCode(callSuper = true)
 public class NamedDTO extends BaseDTO {
+
     @NotBlank
     @Size(min = 2, max = 100)
     @NoHtml
