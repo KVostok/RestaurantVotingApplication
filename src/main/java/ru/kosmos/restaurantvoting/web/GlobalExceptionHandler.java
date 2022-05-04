@@ -19,6 +19,7 @@ import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 import ru.kosmos.restaurantvoting.error.AppException;
 import ru.kosmos.restaurantvoting.error.NotFoundException;
+import ru.kosmos.restaurantvoting.error.VoteCantBeChangedException;
 import ru.kosmos.restaurantvoting.util.validation.ValidationUtil;
 
 import java.util.Map;
@@ -64,6 +65,12 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
     public ResponseEntity<?> persistException(WebRequest request, NotFoundException ex) {
         log.error("EntityNotFoundException: {}", ex.getMessage());
         return createResponseEntity(getDefaultBody(request, ErrorAttributeOptions.of(MESSAGE), null), HttpStatus.UNPROCESSABLE_ENTITY);
+    }
+
+    @ExceptionHandler(VoteCantBeChangedException.class)
+    public ResponseEntity<?> persistException(WebRequest request, VoteCantBeChangedException ex) {
+        log.error("VoteCantBeChangedException: {}", ex.getMessage());
+        return createResponseEntity(getDefaultBody(request, ErrorAttributeOptions.of(MESSAGE), null), HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
     @ExceptionHandler(DataIntegrityViolationException.class) //409

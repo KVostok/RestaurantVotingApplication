@@ -76,8 +76,13 @@ public class MatcherFactory {
             return JsonUtil.readValue(getContent(action.andReturn()), clazz);
         }
 
+        public List<T> readAllFromJson(ResultActions action) throws UnsupportedEncodingException {
+            return JsonUtil.readValues(getContent(action.andReturn()), clazz);
+        }
+
         private static String getContent(MvcResult result) throws UnsupportedEncodingException {
             return result.getResponse().getContentAsString();
         }
     }
+
 }

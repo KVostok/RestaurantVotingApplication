@@ -5,7 +5,6 @@ import lombok.*;
 import org.hibernate.validator.constraints.Range;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 @Entity
@@ -18,7 +17,6 @@ public class Dishes extends BaseEntity {
 
     @Column(name = "price", nullable = false, columnDefinition = "int default 0")
     @Range(max = 50000)
-    @NotBlank
     private Integer price;
 
     @ManyToOne(fetch = FetchType.LAZY)

@@ -31,6 +31,10 @@ public class UsersTestData {
     public static final int USER_ROLES_ID = START_SEQ + 2;
     public static final int ADMIN_ROLES_ID_1 = START_SEQ;
     public static final int ADMIN_ROLES_ID_2 = START_SEQ + 1;
+    public static final String USER_MAIL = "user1@yandex.ru";
+    public static final String USER12_MAIL = "user12@yandex.ru";
+    public static final String USER13_MAIL = "user13@yandex.ru";
+    public static final String ADMIN_MAIL = "admin@gmail.com";
 
     public static final Users user1 = new Users(USER_ID, "User1", "user1@yandex.ru", "password");
     public static final Users user2 = new Users(USER_ID + 1, "User2", "user2@yandex.ru", "password");
